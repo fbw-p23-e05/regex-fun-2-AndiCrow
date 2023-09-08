@@ -54,15 +54,14 @@ import re
 
 #Task 7
 text4 = 'Python_exercises, PHP_exercises, C#_exercises'
-# pattern7 = r'\s'
-# replaced_ch = r"_"
+pattern7 = r'\s|_'
 
+result = re.sub(pattern7, lambda match: '_' if match.group() == ' ' else ' ', text4)
 
-# result = re.sub(pattern7, lambda match: replaced_ch if match.group() == ' ' else '_', text4)
-# print(text4)
-# print(result) not try regex anymore on this. still not going to 
-
-
+print("Original Text:")
+print(text4)
+print("Modified Text:")
+print(result)
 
 #Task 8
 
